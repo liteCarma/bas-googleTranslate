@@ -181,7 +181,7 @@ function gtranslate() {
       url = url + '/_/TranslateWebserverUi/data/batchexecute?' + Object.keys(data).map(function (k) {
         return k + '=' + data[k]
       }).join('&');
-      var body = 'f.req=' + encodeURIComponent(JSON.stringify([
+      var data = 'f.req=' + encodeURIComponent(JSON.stringify([
         [
           [
             'MkEWBc',
@@ -194,14 +194,14 @@ function gtranslate() {
           ]
         ]
       ])) + '&';
+      var body = got.createData('custom/application/x-www-form-urlencoded;charset=UTF-8');
+      body.add(data);
       _call_function(got.post, {
-          url: url,
-          headers: {
-            'content-type': 'application/x-www-form-urlencoded;charset=UTF-8'
-          },
-          body: body
-        })!
-        var json = _result_function().slice(6)
+        url: url,
+        contentType: body.contentType,
+        body: body
+      })!
+      var json = _result_function().slice(6)
       var length = '';
       var result = {
         text: '',
