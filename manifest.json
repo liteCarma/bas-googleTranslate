@@ -3,18 +3,18 @@
         {
             "code": [
                 {
-                    "file": "gtranslate_gtranslate_code.js",
-                    "name": "gtranslate_gtranslate_code"
+                    "file": "gtranslate_code.js",
+                    "name": "gtranslate_code"
                 }
             ],
             "description": {
                 "en": "google translate",
                 "ru": "google translate"
             },
-            "interface": "gtranslate_gtranslate_interface.js",
+            "interface": "gtranslate_interface.js",
             "is_element": false,
-            "name": "gtranslate_gtranslate",
-            "select": "gtranslate_gtranslate_select.js",
+            "name": "gtranslate",
+            "select": "gtranslate_select.js",
             "template": ""
         }
     ],
@@ -27,7 +27,7 @@
     "depends": [
       "got"
     ],
-    "dependent_actions": ["gtranslate_gtranslate_code"],
+    "dependent_actions": ["gtranslate_code"],
     "description": "google translate",
     "description_small": {
         "en": "google translate",
