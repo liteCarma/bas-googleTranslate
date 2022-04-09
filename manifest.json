@@ -15,7 +15,7 @@
             "is_element": false,
             "name": "gtranslate",
             "select": "gtranslate_select.js",
-            "template": ""
+            "template": "{{text}}"
         }
     ],
     "api_version": 1,
